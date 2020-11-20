@@ -1,5 +1,5 @@
 .main-content__title{
-  font-family: 'Roboto Slab', serif;
+  font-family:'Roboto', sans-serif;
   color: purple;
 }
 
@@ -19,6 +19,7 @@ body{
 .header{
   display: flex;
   justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
 }
 
 .logo{
