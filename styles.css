@@ -60,6 +60,10 @@ body{
   margin-right: 0;
 }
 
+.menu__item:hover{
+  opacity: .5;
+}
+
 .menu__item{
   position: relative;
   margin-right: 26px;
@@ -79,6 +83,19 @@ body{
   background: #0056EC;
 }
 
-.menu__item:hover{
-  opacity: .5;
+.menu__item::after{
+  position: absolute;
+  display: block;
+  content:'';
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #0056EC;
+  opacity: .5s;
+  transition: opacity .5s, width .5s;
+}
+
+.menu__item:hover::after, .menu__item_active::after{
+  opacity: 1;
+  width: 100%;
 }
