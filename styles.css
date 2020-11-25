@@ -1,6 +1,29 @@
-.main-content__title{
-  font-family:'Roboto', sans-serif;
-  color: purple;
+.main__title{
+  margin:0 0 40px 0;
+  font: 700 50px/64.7px 'pt_serifbold', arial, helvetica, sans-serif;
+}
+
+.main__subtitle{
+  margin:0 0 41px 0;
+  font: 400 18px/21.09px 'Roboto', arial, helvetica, sans-serif;
+}
+
+.main__button{
+  font: 500 14px/16.41px 'Roboto', arial, helvetica, sans-serif;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #0056EC;
+  border-radius: 4px;
+}
+
+.main__title-text_highlight{
+  background: #ECF3FF;
+}
+
+.main{
+  padding: 0 63% 100px 0;
+  background: top right no-repeat url('img/mainimg.svg');
 }
 
 body{
@@ -19,6 +42,7 @@ body{
 .header{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 100px;
 }
 
 .logo{
