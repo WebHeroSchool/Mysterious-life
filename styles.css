@@ -126,7 +126,7 @@ body{
   width: 0;
   height: 3px;
   background: #0056EC;
-  opacity: .5s;
+  opacity: .5;
   transition: opacity .5s, width .5s;
 }
 
@@ -135,46 +135,15 @@ body{
   width: 100%;
 }
 
-@media(max-width:768px){
-  .menu{
-    display: none;
-  }
+@media (max-width: 375px) {
 
-  .header{
-    margin-bottom: 28px;
-  }
-
-  .main{
-    text-align: center;
-    padding: 74% 0 0;
-    background-size: 74%;
-    background-position: top-senter;
-  }
-
-  .main__title{
-    margin:0 0 44px 0;
-    font: 700 30px/38.82px 'pt_serifbold', arial, helvetica, sans-serif;
-  }
-
-  .main__subtitle{
-    margin:0 0 25px 0;
-    font: 500 16px/18.75px 'Roboto', arial, helvetica, sans-serif;
-  }
-
-  .main__button{
-    font: 500 14px/16.41px 'Roboto', arial, helvetica, sans-serif;
-  }
-
-  .text{
-    opacity: 0;
-  }
-
-}
-
-@media (max-widht: 375px) {
+  .wrapper {
+      width: 87%;
+    }
 
   .logo{
     color: rgba(255, 0, 0, 0);
+    padding: 23px 0;
   }
 
   .menu {
@@ -182,19 +151,79 @@ body{
   }
 
  .main {
-   padding: 62% 0 0 0;
+   padding: 75% 0 0 0;
    background: top center no-repeat url(img/mainimg.svg);
+   background-size: 42vh 34.5vh;
+   background-position-y: -3vw;
+ }
+
+ .menu__item {
+   font: 500 30px/35.16px 'Roboto', arial, helvetica, sans-serif;
+   padding: 0 0 24px 0;
+ }
+
+ .menu__item:hover::after {
+   opacity: 1;
+   width: 100%;
  }
 
   #checkbox {
+    display: none;
+  }
+
+  #checkbox:checked ~ .menu {
     display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: white;
+    justify-content: center;
+  }
+
+  #checkbox:checked ~ .burger-menu {
+    background-color: white;
+    transform: rotate(90deg);
+    transition: transform .5s ease-in, background-color .5s;
+  }
+
+  #checkbox:checked ~ .burger-menu::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  #checkbox:checked ~ .burger-menu::before {
+    transform: rotate(-45deg);
+    top: 0;
   }
 
   .burger-menu {
     display: flex;
-    width: 30px;
+    position: relative;
+    top: 6vh;
+    width: 26px;
     height: 4px;
     background-color: blue;
+    z-index: 3;
   }
 
+  .burger-menu::before {
+    position: absolute;
+    content: '';
+    top:-1.2vh;
+    background-color: blue;
+    width: 26px;
+    height: 4px;
+    transition: all .5s ease-in;
+  }
+
+  .burger-menu::after {
+    position: absolute;
+    content: '';
+    top: 1.2vh;
+    background-color: blue;
+    width: 26px;
+    height: 4px;
+    transition: all .5s ease-in;
 }
