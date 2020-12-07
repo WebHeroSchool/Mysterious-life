@@ -220,7 +220,7 @@ body {
     }
 }
 
-@media (max-width:500px) {
+@media (max-width:650px) {
 
   .wrapper {
     width: 90%
@@ -263,34 +263,7 @@ body {
 
 }
 
-@media (max-width: 400px) {
-
-  .logo {
-      font-size: 13px;
-    }
-
-  .menu__item {
-  font-size: 8px;
-  }
-
-  .main {
-    padding: 2% 54% 17% 0;
-    background-size: 55% 54%;
-  }
-
-  .main__subtitle {
-    font-size: 13px;
-    line-height: 16.09px;
-    margin-bottom: 45px;
-  }
-
-  .main__button {
-      font-size: 9px;
-    }
-
-}
-
-@media (max-width: 375px) {
+@media (max-width: 480px) {
 
   .wrapper {
       width: 87%
@@ -315,7 +288,7 @@ body {
    background-size: 42vh 35.5vh;
  }
 
-  .main__title, .main__subtitle {
+  .main__title, .main__subtitle, .main__button {
     text-align: center;
   }
 
@@ -343,10 +316,6 @@ body {
  .menu__item:hover::after {
    opacity: 1;
    width: 100%;
- }
-
- .main__button {
-   margin-left: 60px;
  }
 
   #checkbox {
